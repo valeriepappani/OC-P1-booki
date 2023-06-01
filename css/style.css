@@ -75,7 +75,7 @@ nav li a:hover {
     margin-right: 30px;
 }
 
-    /****Section recherche formulaire****/
+/****Section recherche formulaire****/
 .recherche {
     margin: 30px 50px;
 }
@@ -121,9 +121,53 @@ nav li a:hover {
 }
 
 
+/****FILTRES****/
+section {
+    margin: 0 50px 30px 50px;
+}
+
+.filtres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float:left;
+}
+
+.titreFiltres{
+    font-size:17px;
+    font-weight: 700;
+}
+
+.filtresBlocs {
+    display:flex;
+    flex-direction:row;
+}
+
+.listeFiltres {
+    display:flex;
+    flex-direction:row;
+    border: 2px solid #D9D9D9;
+    padding: 15px 19px;
+    align-items: center;
+    border-radius: 30px;
+    margin:0;
+
+}
+
+
+
+
 /*****TABLETTE*****/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
+/****FILTRES****/
+/*.filtres {
+    display: inline;
+    margin-bottom:20px;
+    float:left;
+}
+.titreFiltres {
+    margin-bottom:20px;
+}*/
     }
 
 
@@ -188,6 +232,18 @@ nav li a:hover {
     }
 
     /****Section recherche formulaire****/
+    .formRecherche{
+        /*white-space: nowrap;*/
+    }
+
+    section {
+        margin: 30px 20px;
+    }
+
+    .searchVille {
+        padding: 14px 14px;
+    }
+
     .recherche {
         margin: 30px 20px;
     }
@@ -200,4 +256,6 @@ nav li a:hover {
         display: none;
     }
     
+    /****FILTRES****/
+
 }
