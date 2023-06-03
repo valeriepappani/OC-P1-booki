@@ -22,10 +22,16 @@ h1 {
     padding-bottom:8px;
 }
 
+h4 {
+    font-size:18px;
+    font-weight: 700;
+}
+
 .pFooter {
     font-size: 16px;
     font-weight: 400;
 }
+
 
 
 /*****DESKTOP*****/
@@ -42,7 +48,7 @@ header img {
 
 .container-header {
     display:flex;
-    height:79px;
+    height:80px;
 }
 
 nav {
@@ -54,6 +60,7 @@ nav ul {
     flex-direction: row;
     float:right;
 }
+
 
 nav li {
     list-style-type:none;
@@ -76,8 +83,8 @@ nav li a:hover {
 }
 
 /****Section recherche formulaire****/
-.recherche {
-    margin: 30px 50px;
+.recherche, .filtres {
+    margin: 30px 50px 0 50px;
 }
 
 .formRecherche {
@@ -122,37 +129,56 @@ nav li a:hover {
 
 
 /****FILTRES****/
-section {
-    margin: 0 50px 30px 50px;
-}
-
-.filtres {
-    display: flex;
-    flex-direction: row;
+.filtres { 
+    display:flex;
     align-items: center;
     float:left;
 }
 
-.titreFiltres{
-    font-size:17px;
-    font-weight: 700;
+.filtres h4 {
+    float:left;
 }
 
-.filtresBlocs {
-    display:flex;
-    flex-direction:row;
-}
-
-.listeFiltres {
-    display:flex;
-    flex-direction:row;
-    border: 2px solid #D9D9D9;
-    padding: 15px 19px;
-    align-items: center;
-    border-radius: 30px;
+.filtres ul {
     margin:0;
-
+    padding:0;
 }
+.filtres li {
+    display:flex;
+    float:left;
+    border: 2px solid #D9D9D9;
+    border-radius:30px;
+    padding: 15px;
+    margin-left:15px;
+}
+
+.filtres li:hover {
+    background-color:#DEEBFF;
+}
+
+.filtres p{
+    margin-left:15px;
+    font-size:17px;
+    font-weight:700;
+}
+
+/****INFO****/
+.info {
+    float:left;
+    margin: 30px 50px 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-info {
+    border-radius: 50%;
+    padding:5px 10px;
+    border: 1px solid #F2F2F2;
+    margin-right:10px;
+}
+
 
 
 
@@ -160,14 +186,20 @@ section {
 /*****TABLETTE*****/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 /****FILTRES****/
-/*.filtres {
-    display: inline;
-    margin-bottom:20px;
+.filtres { 
+    display:flex;
+    flex-direction: column;
     float:left;
 }
-.titreFiltres {
+
+.filtres h4 {
+    width:100%;
     margin-bottom:20px;
-}*/
+}
+.filtres li {
+    margin-left: 0;
+    margin-right:10px;
+}
     }
 
 
@@ -219,32 +251,33 @@ section {
         padding-top: 14px;
     }
 
-    nav li a:hover {
+    nav li:hover a {
         color: #0065FC;
     }
 
     nav li a:hover {
         border-top: none;
+        color: #0065FC;
     }
 
     .hebergements {
         margin-right: 0px;
     }
 
-    /****Section recherche formulaire****/
-    .formRecherche{
-        /*white-space: nowrap;*/
+    .hebergements:hover {
+        color: #0065FC;
     }
 
+    /****Section recherche formulaire****/
     section {
         margin: 30px 20px;
     }
 
     .searchVille {
-        padding: 14px 14px;
+        padding: 14px 14px 14px 10px;
     }
 
-    .recherche {
+    .recherche, .info {
         margin: 30px 20px;
     }
 
@@ -258,4 +291,39 @@ section {
     
     /****FILTRES****/
 
+    .recherche, .filtres {
+        margin: 30px 20px 0 20px;
+    }
+    
+    .filtres { 
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        float:none;
+        width:100%;
+    }
+
+    .filtres h4 {
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    .filtres ul {
+        width:100%;
+    }
+
+    .filtres li{
+        width:35%;
+        margin-bottom:15px;
+        padding:15px;
+    }
+
+    .filtres p {
+        width:100%;
+    }
+
+    .filtres li {
+        margin-left: 0;
+        margin-right:15px;
+    }
 }
