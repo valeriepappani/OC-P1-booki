@@ -22,9 +22,24 @@ h1 {
     padding-bottom:8px;
 }
 
+h2 {
+    font-size: 22px;
+    font-weight:700;
+}
+
+h3 {
+    font-size:16px;
+    font-weight: 700;
+}
+
 h4 {
     font-size:18px;
     font-weight: 700;
+}
+
+p {
+    font-size:14px;
+    font-weight:400;
 }
 
 .pFooter {
@@ -131,8 +146,14 @@ nav li a:hover {
 /****FILTRES****/
 .filtres { 
     display:flex;
+}
+
+.filtres article {
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
-    float:left;
 }
 
 .filtres h4 {
@@ -164,11 +185,9 @@ nav li a:hover {
 
 /****INFO****/
 .info {
-    float:left;
     margin: 30px 50px 0 50px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
 
@@ -176,9 +195,65 @@ nav li a:hover {
     border-radius: 50%;
     padding:5px 10px;
     border: 1px solid #F2F2F2;
-    margin-right:10px;
+    margin:0px;
 }
 
+.info p {
+    margin: 0 0 0 10px;
+}
+
+/****Hébergements Marseille****/
+
+.containerHebergement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px 50px;
+    padding: 30px;
+    background-color:#F2F2F2;
+    border-radius: 30px;
+    gap : 30px;
+}
+
+.containerHebergement h2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 0;
+    margin-bottom:10px;
+}
+
+.cartes {
+    width:100%;
+    background-color: #fff;
+    border: 5px solid #FFF;
+    border-radius: 20px;
+}
+
+
+.containerHebergement img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+} 
+
+.infosHebergements {
+    padding: 15px;
+}
+
+.infosHebergements p {
+    padding-top:8px;
+}
+
+.containerHebergement h4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin:0;
+}
+
+.containerHebergement h4 a {
+    color: #000;
+    text-decoration: none;
+}
 
 
 
@@ -188,8 +263,11 @@ nav li a:hover {
 /****FILTRES****/
 .filtres { 
     display:flex;
-    flex-direction: column;
-    float:left;
+}
+
+.filtres article {
+    display: block;
+    margin: 0;
 }
 
 .filtres h4 {
@@ -288,6 +366,11 @@ nav li a:hover {
     .searchDesk {
         display: none;
     }
+
+    .buttonSearch {
+        border-radius: 15px;
+        margin-left: -15px;
+    }
     
     /****FILTRES****/
 
@@ -296,11 +379,13 @@ nav li a:hover {
     }
     
     .filtres { 
-        display:flex;
+        display: flex;
         flex-direction: column;
-        flex-wrap:wrap;
-        float:none;
-        width:100%;
+        flex-wrap: wrap; 
+    }
+
+    .filtres article {
+        display: block;
     }
 
     .filtres h4 {
@@ -313,17 +398,16 @@ nav li a:hover {
     }
 
     .filtres li{
-        width:35%;
-        margin-bottom:15px;
-        padding:15px;
+        width: 125px;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin-left: 0;
+        margin-right: 5px;
+
     }
 
     .filtres p {
         width:100%;
-    }
-
-    .filtres li {
-        margin-left: 0;
-        margin-right:15px;
+        margin-left:10px;
     }
 }
