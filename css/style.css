@@ -47,6 +47,11 @@ p {
     font-weight: 400;
 }
 
+.cartes a, .containerPopulaires a, .containerInfosActivites a {
+    text-decoration: none;
+    color: black;
+    width:100%;
+}
 
 
 /*****DESKTOP*****/
@@ -344,7 +349,6 @@ background-color: white;
 box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 border-radius: 20px;
 margin-top: 30px;
-
 }
 
 .containerActivites img {
@@ -358,9 +362,26 @@ margin-top: 30px;
     padding:20px;
     font-size: 16px;
     font-weight:700;
-
 }
 
+/*FOOTER*/
+footer {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+footer p {
+    margin-top: 15px;
+}
+
+footer a {
+    color:black;
+    text-decoration: none;
+}
 
 /*****TABLETTE*****/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -424,13 +445,13 @@ margin-top: 30px;
 
 }
 
-    /*****MOBILE*****/
-    @media only screen and (max-width: 767px) and (min-width: 320px) {
+/*****MOBILE*****/
+@media only screen and (max-width: 767px) and (min-width: 320px) {
 
-    /*HEADER*/
-    header{
-        height: auto;
-    }
+/*HEADER*/
+header {
+  height: auto;
+ }
 
     header img {
         margin: 30px auto 30px auto;
@@ -606,6 +627,10 @@ margin-top: 30px;
 
     .NotreDame img {
         object-position: top;
+    }
+
+    .port img {
+        object-position: bottom;
     }
 
 }
