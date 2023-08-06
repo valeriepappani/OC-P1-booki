@@ -83,7 +83,6 @@ p {
     margin: 0;
 }
 
-
 /******Header*****/
 .container-header {
     display: flex;
@@ -107,7 +106,7 @@ p {
     list-style-type: none;
 }
 
-.container-header li a { 
+.container-header li a {
     text-decoration: none;
     color: #000000;
 }
@@ -119,12 +118,12 @@ p {
 }
 
 /***** Infogroup *****/
-.Headline,
-.searchBar {
+.headline,
+.search-bar {
     margin: 30px 0;
 }
 
-.searchBar form {
+.search-bar form {
     margin-top: 35px;
     display: flex;
     justify-content: flex-start;
@@ -138,7 +137,7 @@ p {
     border: 1px solid #F2F2F2;
 }
 
-.searchVille {
+.search-ville {
     font-size: 18px;
     font-weight: 700;
     padding: 0 20px;
@@ -149,6 +148,7 @@ p {
 }
 
 button {
+    display: none;
     background-color: transparent;
     border: none;
 
@@ -158,7 +158,7 @@ button {
     color: black;
 }
 
-.buttonSearch {
+.button-search {
     padding: 15px 16px;
     background-color: #0065FC;
     border: 1px solid #0065FC;
@@ -295,17 +295,16 @@ input:focus {
     margin-bottom: 8px;
 }
 
-.lienHebergement {
+.lien-hebergement {
     margin-top: 30px;
 }
 
-.lienHebergement a {
+.lien-hebergement a {
     text-decoration: none;
     color: #000;
     font-weight: 700;
     font-size: 18px;
 }
-
 
 /******Populaires*****/
 .populaires {
@@ -362,36 +361,35 @@ input:focus {
     margin-bottom: 35px;
 }
 
-.activitesMarseille {
+.activites-marseille {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-.activitesMarseille .card img {
+.activites-marseille .card img {
     object-fit: cover;
     height: 380px;
     width: 100%;
     border-radius: 20px 20px 0 0;
 }
 
-.activitesMarseille .card {
+.activites-marseille .card {
     padding: 0;
     min-height: 100%;
 
 }
 
-.activitesMarseille h3 {
+.activites-marseille h3 {
     padding: 20px;
     margin: 0;
 }
 
-.activitesMarseille a {
+.activites-marseille a {
     text-decoration: none;
     color: #000;
     width: 100%;
 }
-
 
 /*****Footer*****/
 footer {
@@ -427,13 +425,8 @@ footer li a {
     font-weight: 400;
 }
 
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/********** TABLETTE **********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/**********TABLETTE**********/
+/*(inférieur ou égal à 1024px)*/
 @media (max-width: 1024px) {
 
     /*****FILTRES*****/
@@ -473,21 +466,12 @@ footer li a {
         width: 100%;
     }
 
-    /* .populaires-cards .card {
-        width: 30%;
-    } */
-
-    /* .populaires-cards .card-title {
-        font-size: 14px;
-    } */
-
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
 
     /*****Activités*****/
-
-    .activitesMarseille .card img {
+    .activites-marseille .card img {
         object-fit: cover;
         height: 200px;
         width: 100%;
@@ -497,8 +481,8 @@ footer li a {
 
 
 /********** MOBILE **********/
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+/* (inférieur à 768px)*/
+@media (max-width: 767px) {
 
     .main-container {
         padding: 0;
@@ -506,7 +490,6 @@ footer li a {
 
     /***** HEADER *****/
     .container-header {
-        /* display: flex; */
         flex-direction: column;
         align-items: center;
     }
@@ -542,17 +525,21 @@ footer li a {
     }
 
     /*****Infogroup*****/
-    .infoGroup {
+    .info-group {
         margin: 30px 20px;
     }
 
-    .buttonSearch {
+    .button-search {
         display: none;
     }
 
     .fa-magnifying-glass {
         display: block !important;
         margin-left: -15px;
+    }
+
+    button {
+        display: block;
     }
 
     /*****Filtres*****/
@@ -588,11 +575,12 @@ footer li a {
         width: auto;
     }
 
-    .hotelPort {
+    /*Ordre des cards*/
+    .hotel-port {
         order: 0;
     }
 
-    .Amina {
+    .amina {
         order: 5;
     }
 
@@ -600,15 +588,15 @@ footer li a {
         order: 2;
     }
 
-    .hotelMer {
+    .hotel-mer {
         order: 3
     }
 
-    .Canebiere {
+    .canebiere {
         order: 1;
     }
 
-    .aubergePanier {
+    .auberge-panier {
         order: 4;
     }
 
@@ -626,15 +614,15 @@ footer li a {
     }
 
     /*****Activites*****/
-    .activitesMarseille {
+    .activites-marseille {
         flex-direction: column;
     }
 
-    .activitesMarseille .card img {
+    .activites-marseille .card img {
         height: 141px;
     }
 
-    .NotreDame img {
+    .notre-dame img {
         object-position: top;
     }
 
