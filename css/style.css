@@ -204,6 +204,11 @@ input:focus {
     border-radius: 25px;
 }
 
+.filtres li a {
+    text-decoration:none;
+    color:#000;
+}
+
 .filtres .fa-solid {
     color: #0065FC;
     padding-right: 10px;
@@ -426,7 +431,7 @@ footer li a {
 }
 
 /**********TABLETTE**********/
-/*(inférieur ou égal à 1024px)*/
+/*(inférieur ou égale à 1024px)*/
 @media (max-width: 1024px) {
 
     /*****FILTRES*****/
