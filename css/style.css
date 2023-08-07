@@ -22,6 +22,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px; /*Ajout de la largeur minimale du site*/
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -56,7 +57,7 @@ body {
 
 /*****Textes*****/
 h1 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
     line-height: 30px;
     margin: 0;
@@ -540,11 +541,15 @@ footer li a {
 
     .fa-magnifying-glass {
         display: block !important;
-        margin-left: -15px;
     }
 
     button {
         display: block;
+        padding: 0;
+    }
+
+    .search-ville{ 
+        width:100%; /*Le champ de recherche prend toute la largeur (100%) sur mobile*/
     }
 
     /*****Filtres*****/
@@ -561,6 +566,7 @@ footer li a {
         border: 2px solid #F2F2F2;
         border-radius: 25px;
         width: 40%;
+        flex-grow: 1; /*Les filtres s'affichent sur toute la largeur en 320px*/
     }
 
     /*****Hebergement*****/
